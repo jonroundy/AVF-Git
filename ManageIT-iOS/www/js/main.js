@@ -8,7 +8,7 @@ function orient() {
 	}
 	else { 
 		$("#orientation").each(function(){
-	  	$(this).attr('href','css/portrait.css');		
+	  	$(this).attr('href','css/landscape.css');		
 	  }); 
 	}
 };
