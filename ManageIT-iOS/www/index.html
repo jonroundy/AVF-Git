@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <!- Jon Roundy ->
-
 <html>
-
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <link id="orientation" rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
         <title>Hello World</title>
         </head>
     
-    <body>
         <header>
-        		<h1 class="logo"> Manage IT </h1>
+        		<h1 classs="logo"> Manage IT </h1>
+        		
         </header>
         	
-        <article>
-        		
-        	<section class="features">
+            <section class="sideNav">
+            <nav>
         		<h3> iOS / Android Native Features </h3>
 	        	<hr>
-	        	
-        		<nav>
-        			<ul>
+	        		
+        			<ul class="featuresNav">
         				<li>Work order completion with Geo</li> 
         				<li>Network</li> 
         				<li>Camera with GEO</li>
         				<li>Notifications</li>       				
         			</ul>
-        		</nav> 
-        	</section>
+
         	
-        	<section class="dataApi">
         		<h3> Data API's </h3>
         		<hr>
-        			
-        		<nav>
-        			<ul>
+        		
+        			<ul class="apiNav">
         				<li> Twitter API </li>
         				<li> Facebook API </li>
         			</ul>
         		</nav>
-        	</section>
         	
-        	<section class="research">
         		<h3> Research </h3>
         		<hr>
         			
-        		<nav>
         			<h3> Week 1 </h3>
-        			<ul>
+        			<ul class="researchNav">
         				<li> <a href="https://github.com/jonroundyfs/AVF-APP/tree/iOS">Ios</a> </li>
         				<li> <a href="https://github.com/jonroundyfs/AVF-APP/tree/Android">Android</a> </li>
         			</ul>
@@ -75,11 +68,16 @@
         		</nav>
         	</section>
 
+    		<section class="content">
+    		<article>
+    		<h1> This is our dummy content until api pull </h1>
+    			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius urna vel libero feugiat rutrum. Morbi viverra lobortis facilisis. Suspendisse potenti. Mauris tempor, risus a molestie congue, felis diam auctor lectus, sed suscipit tellus libero et magna. Aenean vestibulum orci quis massa sagittis eu volutpat turpis lacinia. Proin ullamcorper enim lacus. Donec sodales accumsan diam, id adipiscing enim hendrerit tristique. Vivamus congue, turpis vitae tincidunt scelerisque, est turpis venenatis mauris, eget scelerisque tellus nunc sed nulla. Suspendisse odio enim, porttitor sit amet lacinia non, scelerisque ac sem. Nulla sed nulla dolor, eget gravida velit. Integer nec lectus eget eros gravida lacinia. Sed faucibus mauris vitae quam gravida eget aliquam risus laoreet. Sed ornare, tellus quis ornare sodales, velit quam accumsan justo, id varius lorem diam in metus. Mauris at pulvinar turpis. Donec orci augue, tincidunt id euismod ac, fringilla sit amet tortor. Nunc faucibus sem placerat elit fermentum eu congue ipsum feugiat. </p>
     		
+    		</section>
         
         
         <script type="text/javascript" src="cordova-2.4.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

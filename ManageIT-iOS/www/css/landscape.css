@@ -1,0 +1,19 @@
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+/*iPad landscape*/
+body {
+    background-color:blue;
+}
+
+header {
+	background-color:gray;
+	width:100%;
+	padding-left: 0px;
+	display:block;
+    position:relative;
+    z-index:2;
+    margin-top:-22px;
+    border-bottom:2px solid white;
+    margin-bottom:20px;
+    height:60px;
+}
+}
