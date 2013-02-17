@@ -1,6 +1,4 @@
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
 and (orientation : landscape) {
 /* Styles */
 
@@ -10,9 +8,11 @@ html, body {
     background-image:url('../img/BG/ipad-landscape-2x.png');
     height:100%;
 }
-
+/* PAGE TAP */
 header {
-	background-color:gray;
+	background-color:#262626;
+	height:4%
+	
     
 }
 
@@ -20,28 +20,90 @@ header .logo {
 	font-family: 'Oswald', sans-serif;
 	font-size: 28px;
 	text-align: center;
+	color:white;
 }
 
+/* -------------------------------- */
+
+/* SIDE Page */
 
 .sideNav {
-background-color: #26262b;
-color:white;
+color:black;
 float:left;
 width:25%;
-position:relative;
+position:absolute;
 min-height: 100%;
+background-color: #888a8b;
 
 }
 
+.notice {
+	padding:8px 0px 10px 0px;
+	border-bottom: 1px solid black;
+	border-right: 10px solid black;
+
+}
+
+.menu li {
+font-size: 90%;
+display: block;
+padding: 20px 0px 20px 16px;
+border-bottom: 1px solid black;
+border-right: 10px solid black;
+
+
+
+}
+
+.menu li:hover {
+		-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	
+}
+	a:link {
+	text-decoration:none;
+	color:white;
+	
+	}
+	a:visited {
+	text-decoration:none;
+	color:white;
+		
+	}
+	a:hover {
+	background-color:black !important;
+
+	}
+	a:active {
+	text-decoration:underline;
+	color:white;
+	background-color:#ffffff;
+		
+	}
+
+.menu {
+font-family: 'Tienne', serif;
+
+}
+
+
+
+
+
+/* -------------------------------- */
+
+/* CONTENT */
 .content {
 background-color: white;
 width:75%;
 position:relative;
 float:right;
 height:100%;
+padding: 5px 0px 5px 10px;
+color:black;
 }
 
 
+/* BOTTOM */
 footer {
 position: fixed;
 bottom:0;
@@ -50,4 +112,6 @@ background-color: green;
 width:100%;
 }
 
-}
+
+/* -------------------------------- */
+} 
