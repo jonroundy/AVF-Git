@@ -4,22 +4,17 @@ and (orientation : landscape) {
 
 /*iPad landscape*/
 html, body {
-  
-    background-image:url('../img/BG/ipad-landscape-2x.png');
-    height:100%;
+  	height:100%;
 }
 /* PAGE TAP */
 header {
 	background-color:#262626;
 	height:4%
-	
-    
 }
 
 header .logo {
 	font-family: 'Oswald', sans-serif;
 	font-size: 28px;
-	text-align: center;
 	color:white;
 }
 
@@ -40,7 +35,15 @@ background-color: #888a8b;
 .notice {
 	padding:8px 0px 10px 0px;
 	border-bottom: 1px solid black;
-	border-right: 10px solid black;
+	border-right: 1px solid black;
+	text-align: center;
+	line-height: 17px;
+	font-weight: 600;
+
+}
+
+.menu {
+font-family: 'Tienne', serif;
 
 }
 
@@ -49,44 +52,17 @@ font-size: 90%;
 display: block;
 padding: 20px 0px 20px 16px;
 border-bottom: 1px solid black;
-border-right: 10px solid black;
-
-
+border-right: 1px solid black;
 
 }
 
-.menu li:hover {
-		-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-	
-}
-	a:link {
+
+.menu li:hover, a:link, a:visited, a:active {
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	text-decoration:none;
 	color:white;
 	
-	}
-	a:visited {
-	text-decoration:none;
-	color:white;
-		
-	}
-	a:hover {
-	background-color:black !important;
-
-	}
-	a:active {
-	text-decoration:underline;
-	color:white;
-	background-color:#ffffff;
-		
-	}
-
-.menu {
-font-family: 'Tienne', serif;
-
 }
-
-
-
 
 
 /* -------------------------------- */
@@ -94,24 +70,51 @@ font-family: 'Tienne', serif;
 /* CONTENT */
 .content {
 background-color: white;
-width:75%;
+width:73%;
+height:100%;
 position:relative;
 float:right;
 height:100%;
-padding: 5px 0px 5px 10px;
+padding: 13px 6px 5px 0px;
 color:black;
 }
 
+/* -------------------------------- */
 
-/* BOTTOM */
-footer {
-position: fixed;
-bottom:0;
-color:white;
-background-color: green;
-width:100%;
+.head h1 {
+	text-align: center;
+	font-size: 30px;
+	background: white;
 }
 
 
-/* -------------------------------- */
+
+.nativeContent li {
+font-size: 90%;
+text-align: center;
+border-bottom: 1px solid black;
+line-height: 50px;
+width:100%;
+}
+
+.nativeContent li:hover, a:link, a:visited, a:active {
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	text-decoration:none;
+	color:black;
+}
+
+#contentHolder {
+padding-top: 40px;
+color:black;
+height:100%;
+}
+
+#twit {
+	background-color: #dad3d3
+}
+#twit h2{
+	line-height: 30px;
+	
+}
+
 } 
