@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!- Jon Roundy ->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <link id="orientation" rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tienne:700' rel='stylesheet' type='text/css'>
+    <title>ManageIT</title>
+</head>
+
+        <section class="wrapper">
+            <div class="sideNav">
+            
+            	<header class="logo">
+        			<h1> Manage IT </h1>
+        		</header>
+        		
+            		<aside class="notice">
+            		
+	            	<p>Jon Roundy - AVF 2-13 <br/>This application is to showcase each weeks progress in our assignments</p>
+	            	
+		            </aside>
+		            
+		        <nav class="menu">
+			        <ul>
+				        <a href="#" id="native"><li> Native Features</li> </a>
+				        <a href="#" id="data"><li> Data API's</li> </a>
+				        <a href="#" id="research"><li> Research</li> </a>
+				    </ul>
+            
+				</nav>
+				
             </div>
-        </div>
+
+    	<article class="content">
+	    	<div id="twit"> </div>
+	    	<div id="fb"> </div>
+	    </article>
+    		
+        </section>
+    		<div class="clear"></div>
+
         <script type="text/javascript" src="cordova-2.4.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+
     </body>
+
 </html>
