@@ -1,33 +1,34 @@
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
-and (orientation : landscape) {
+and (orientation : landscape) { */
 /* Styles */
 
 /*iPad landscape*/
 html, body {
   	height:100%;
+  	background-color: #888a8b;
 }
 /* PAGE TAP */
-header {
-	background-color:#262626;
-	height:4%
-}
-
-header .logo {
+.logo {
 	font-family: 'Oswald', sans-serif;
 	font-size: 28px;
 	color:white;
+	background-color:#262626;
+	height:5%;
+	text-align: center;
 }
 
 /* -------------------------------- */
 
 /* SIDE Page */
-
+.wrapper {
+	height:100%;
+}
 .sideNav {
 color:black;
 float:left;
 width:25%;
-position:absolute;
-min-height: 100%;
+position:fixed;
+height: 100%;
 background-color: #888a8b;
 
 }
@@ -39,7 +40,6 @@ background-color: #888a8b;
 	text-align: center;
 	line-height: 17px;
 	font-weight: 600;
-
 }
 
 .menu {
@@ -70,12 +70,11 @@ border-right: 1px solid black;
 /* CONTENT */
 .content {
 background-color: white;
-width:73%;
+width:75.06%;
 height:100%;
 position:relative;
 float:right;
 height:100%;
-padding: 13px 6px 5px 0px;
 color:black;
 }
 
@@ -110,11 +109,33 @@ height:100%;
 }
 
 #twit {
-	background-color: #dad3d3
+	background-color: #dad3d3;
+	padding-left:15px;
+
 }
 #twit h2{
+
 	line-height: 30px;
 	
 }
 
-} 
+#fb {
+	background-color: teal;
+	padding-left:15px;
+
+}
+
+#fb h2 {
+	line-height: 60px;
+	font-weight: 600;
+	
+}
+
+}
+
+
+
+
+
+
+

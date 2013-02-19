@@ -1,7 +1,144 @@
-body {
-    background-color:red;
+/*
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+*/
+
+/*iPad landscape*/
+html, body {
+  	height:100%;
+  	background-color: #888a8b;
+}
+/* PAGE TAP */
+.logo {
+	font-family: 'Oswald', sans-serif;
+	font-size: 28px;
+	color:white;
+	background-color:#262626;
+	height:4%;
 }
 
-header {
-	background-color:gray;
+/* -------------------------------- */
+
+/* SIDE Page */
+.wrapper {
+	height:100%;
 }
+.sideNav {
+color:black;
+float:left;
+width:25%;
+position:fixed;
+height: 100%;
+background-color: #888a8b;
+
+}
+
+.notice {
+	padding:8px 0px 10px 0px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	text-align: center;
+	line-height: 17px;
+	font-weight: 600;
+}
+
+.menu {
+font-family: 'Tienne', serif;
+
+}
+
+.menu li {
+font-size: 90%;
+display: block;
+padding: 20px 0px 20px 16px;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+
+}
+
+
+.menu li:hover, a:link, a:visited, a:active {
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	text-decoration:none;
+	color:white;
+	
+}
+
+
+/* -------------------------------- */
+
+/* CONTENT */
+.content {
+background-color: white;
+width:75.06%;
+height:100%;
+position:relative;
+float:right;
+height:100%;
+color:black;
+}
+
+/* -------------------------------- */
+
+.head h1 {
+	text-align: center;
+	font-size: 30px;
+	background: white;
+}
+
+
+
+.nativeContent li {
+font-size: 90%;
+text-align: center;
+border-bottom: 1px solid black;
+line-height: 50px;
+width:100%;
+}
+
+.nativeContent li:hover, a:link, a:visited, a:active {
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	text-decoration:none;
+	color:black;
+}
+
+#contentHolder {
+padding-top: 40px;
+color:black;
+height:100%;
+}
+
+#twit {
+	background-color: #dad3d3;
+	padding-left:15px;
+
+}
+#twit h2{
+
+	line-height: 30px;
+	
+}
+
+#fb {
+	background-color: teal;
+	padding-left:15px;
+
+}
+
+#fb h2 {
+	line-height: 60px;
+	font-weight: 600;
+	
+}
+
+
+
+
+
+
+
+

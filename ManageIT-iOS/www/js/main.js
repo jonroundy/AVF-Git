@@ -8,7 +8,7 @@ function orient() {
 	}
 	else { 
 		$("#orientation").each(function(){
-	  	$(this).attr('href','css/landscape.css');		
+	  	$(this).attr('href','css/portrait.css');		
 	  }); 
 	}
 };
@@ -57,15 +57,36 @@ console.log(data);
 	$("#twit").html("<h2>Twitter Results</h2>");
 		for (i=0, j=data.results.length; i<j; i++) {
 			$("#twit").append(
+			"<br/>"+
 			"<ul>"+ 
 			"<li>"+
-			"<p>" + 
-			"<img src= '" + data.results[i].profile_image_url +"' /><br />" +
-							data.results[i].text + "<br/>" + 
-							data.results[i].from_user_name + "," + 
-							data.results[i].created_at  +
-			"</p>" +
+			'<img src='+data.results[i].profile_image_url+'>' +
+			'<br/>' +
+			'<p>' + data.results[i].text + '</p>'+
+			"<br/>" + 
+			'<p>' + data.results[i].from_user_name + ",</p>" + 
+			'<p>' + data.results[i].created_at  + '</p>' +
 			"</li>" +
+			"</ul>");
+		}
+	});
+});
+
+$(function() {
+$.getJSON("https://graph.facebook.com/search?q=tech&type=post", 
+function(request){
+console.log(request);
+	$("#fb").html("<h2>Facebook Results</h2>");
+		for (i=0; i<3; i++) {
+			$("#fb").append(
+			"<br/>"+
+			"<ul>"+ 
+			"<li>"+
+			"<p>" + request.data[i].from.name 	+"</p> <br/>" +
+			"<p>" +	request.data[i].message +",</p>" + 
+			"<p>" +	request.data[i].created_time +"</p>" +
+			"</li>" +
+			"<br/>" +
 			"</ul>");
 		}
 	});
