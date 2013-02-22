@@ -15,42 +15,27 @@ $("#data").click( function() {
 });
 return false;
 });
-
-
-
-function loader() {
-	var state = document.readyState;
-	
-	if (state == 'loaded' || state == 'complete') {
-		run();
-	} else {
-	if (navigator.userAgent.indexOf('Browzr') > -1) {
-		setTimeout(run, 250);
-	} else {
-		
-	document.addEventListener('deviceready',run,false);
-
-		}
-	}
-}
-
-function run() {
-	var success = function(position) {                          // Grab coordinates object from the Position object passed into success callback.
-	var coords = position.coords;
-	var url = "http://maps.google.com/maps/api/staticmap?center=" + coords.latitude + "," + coords.longitude + "&zoom=13&size=320x480&maptype=roadmap&key=AIzaSyAfSCWj9LSPh0HIdEVBozkub1l9yrwqUV4&sensor=true";
-document.getElementById('map').setAttribute('src',url);
-};
-	var error = function(e) {
-		alert('Can\'t retrieve position.\nError: ' + e);
- };
-navigator.geolocation.getCurrentPosition(success, error);
-} 
-
-
-
-
-
-
+$("#compass").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('compass.html').show();
+});
+return false;
+});
+$("#googleMaps").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('geo.html').show();
+});
+return false;
+});
+$("#contact").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('accelerometer.html').show();
+});
+return false;
+});
 
 /* DATA APIs */
 $("#twitter").on('click', function(){
@@ -110,3 +95,8 @@ $('.content').fadeIn(1000);
 		},
 	});
 });
+
+/* PHONEGAP */
+
+
+

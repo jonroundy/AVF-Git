@@ -20,8 +20,8 @@
 //  main.m
 //  ManageIT
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+//  Created by Jon Roundy on 02/21/13.
+//  Copyright ManageIT 2013. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

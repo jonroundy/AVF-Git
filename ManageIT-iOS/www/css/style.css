@@ -89,7 +89,13 @@ html body {	background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);
 
 }
 
-#map { width: 100%; height: 100%; z-index:1; }
+/* the initial rotation value */
+#compass
+{
+-webkit-transform:rotate(0deg); /* iOS and Android */
+}
+
+
 
 } /* Query end */
 
