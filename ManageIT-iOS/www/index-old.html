@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!- Jon Roundy ->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <link id="orientation" rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tienne:700' rel='stylesheet' type='text/css'>
+    <title>ManageIT</title>
+</head>
+
+        <section class="wrapper">
+            <div class="sideNav">
+            
+            	<header class="logo">
+        			<h1> Manage IT </h1>
+        		</header>
+        		
+            		<aside class="notice">
+            		
+	            	<p>Jon Roundy - AVF 2-13 <br/>This application is to showcase each weeks progress in our assignments</p>
+	            	
+		            </aside>
+		            
+		        <nav class="menu">
+			        <ul>
+				       <li>  <a href="#" id="native">Native Features</a></li>
+				       <li>  <a href="#" id="data">Data API's</a></li> 
+				       <li>  <a href="#" id="research"> Research</a></li>
+				    </ul>
+            
+				</nav>
+				
+            </div>
+
+    	<article class="content">
+	    	<div id="twit"> </div>
+	    	<div id="fb"> </div>
+	    </article>
+    		
+        </section>
+    		<div class="clear"></div>
+
+        <script type="text/javascript" src="cordova-2.4.0.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+    </body>
+
+</html>
