@@ -2,3 +2,5 @@
 .DS_Store
 phonegap-2.4.0
 ManageIT-iOS/www/test.html
+
+ManageIT-iOS/www/js/native/gmap.js

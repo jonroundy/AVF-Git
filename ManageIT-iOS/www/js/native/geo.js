@@ -1,5 +1,5 @@
 document.addEventListener("deviceready", onDeviceReady, false);
-alert("hh");
+alert("GEO READY");
 
 function onDeviceReady() {
 	 navigator.geolocation.getCurrentPosition(onSuccess, onError);

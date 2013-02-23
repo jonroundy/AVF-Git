@@ -1,5 +1,5 @@
 document.addEventListener("deviceready", onDeviceReady, false);
-alert("it works");
+//alert("contacts");
 
 
 function onDeviceReady()

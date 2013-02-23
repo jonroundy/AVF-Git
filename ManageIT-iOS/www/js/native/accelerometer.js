@@ -5,23 +5,19 @@ $(document).ready(function(){
     // Wait for Cordova to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
-
     // Cordova is ready
     //
     function onDeviceReady() {
         startWatch();
     }
-
     // Start watching the acceleration
     //
     function startWatch() {
-
-        // Update acceleration every 3 seconds
+    // Update acceleration every 3 seconds
         var options = { frequency: 3000 };
 
         watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     }
-
     // Stop watching the acceleration
     //
     function stopWatch() {
@@ -30,7 +26,6 @@ $(document).ready(function(){
             watchID = null;
         }
     }
-
     // onSuccess: Get a snapshot of the current acceleration
     //
     function onSuccess(acceleration) {
@@ -40,9 +35,6 @@ $(document).ready(function(){
                             'Acceleration Z: ' + acceleration.z + '<br />' +
                             'Timestamp: ' + acceleration.timestamp + '<br />';
     }
-    
-   
-    
     // onError: Failed to get the acceleration
     //
     function onError() {
