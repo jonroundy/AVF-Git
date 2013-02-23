@@ -478,14 +478,13 @@
 - (void)startHeadingWithFilter:(CLLocationDegrees)filter
 {
     if ([self.locationManager respondsToSelector:@selector(headingOrientation)]) {
-        UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation];
-        if (currentOrientation != UIDeviceOrientationUnknown) {
-            CDVViewController* cdvViewController = (CDVViewController*)self.viewController;
-
-            if ([cdvViewController supportsOrientation:currentOrientation]) {
-                self.locationManager.headingOrientation = (CLDeviceOrientation)currentOrientation;
-                // FYI UIDeviceOrientation and CLDeviceOrientation enums are currently the same
-            }
+        UIInterfaceOrientation currentInterfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
+        UIDeviceOrientation currentDeviceOrientation = [[UIDevice currentDevice] orientation];
+        CDVViewController* cdvViewController = (CDVViewController*)self.viewController;
+        
+        if([cdvViewController supportsOrientation:currentInterfaceOrientation ]) {
+            self.locationManager.headingOrientation = (CLDeviceOrientation) currentDeviceOrientation;
+            // FYI UIDeviceOrientation and CLDeviceOrientation enums are currently the same
         }
     }
     self.locationManager.headingFilter = filter;

@@ -8,13 +8,22 @@ $("#native").click( function() {
 return false;
 });
 
-$("#data").click( function() {
+$("#browser").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
-  $('.content').load('data.html').show();
+  $('.content').load('browser.html').show();
 });
 return false;
 });
+
+$("#data").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('accelerometer.html').show();
+});
+return false;
+});
+
 $("#compass").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
@@ -22,6 +31,7 @@ $("#compass").click( function() {
 });
 return false;
 });
+
 $("#googleMaps").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
@@ -29,10 +39,11 @@ $("#googleMaps").click( function() {
 });
 return false;
 });
+
 $("#contact").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
-  $('.content').load('accelerometer.html').show();
+  $('.content').load('contacts.html').show();
 });
 return false;
 });
@@ -62,8 +73,9 @@ $(
 ).appendTo('.content');
 $('.content').fadeIn(1000);
 			}
-		},
+		}
 	});
+	return false;
 });
 
 
@@ -83,7 +95,7 @@ $(
 			"<br/>"+
 			"<ul>"+ 
 			"<li>"+
-			"<p>" + request.data[i].from.name 	+"</p> <br/>" +
+			"<p>" + request.data[i].from.name+"</p> <br/>" +
 			"<p>" +	request.data[i].message +",</p>" + 
 			"<p>" +	request.data[i].created_time +"</p>" +
 			"</li>" +
@@ -92,11 +104,14 @@ $(
 ).appendTo('.content');
 $('.content').fadeIn(1000);
 			}
-		},
+		}
 	});
+	return false;
 });
 
 /* PHONEGAP */
+
+
 
 
 

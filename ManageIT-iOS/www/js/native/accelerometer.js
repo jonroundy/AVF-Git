@@ -1,3 +1,4 @@
+$(document).ready(function(){
     // The watch id references the current `watchAcceleration`
     var watchID = null;
 
@@ -24,7 +25,7 @@
     // Stop watching the acceleration
     //
     function stopWatch() {
-        if () {
+        if (watchID) {
             navigator.accelerometer.clearWatch(watchID);
             watchID = null;
         }
@@ -36,12 +37,15 @@
         var element = document.getElementById('accelerometer');
         element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                             'Acceleration Y: ' + acceleration.y + '<br />' +
-                            'Acceleration Z: ' + acceleration.z + '<br />' + 
-                            'Timestamp: '      + acceleration.timestamp + '<br />';
+                            'Acceleration Z: ' + acceleration.z + '<br />' +
+                            'Timestamp: ' + acceleration.timestamp + '<br />';
     }
-
+    
+   
+    
     // onError: Failed to get the acceleration
     //
     function onError() {
         alert('onError!');
     }
+    });
