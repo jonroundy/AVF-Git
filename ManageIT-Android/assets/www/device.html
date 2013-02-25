@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Properties Example</title>
+    <style type="text/css">
+#deviceProperties{
+	text-align: center;
+}
+.deviceHead{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+</style>
+
+    
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Device Name: <br />'     + device.name     + '<br />' + 
+                            '<br />Device Cordova: <br />'  + device.cordova + '<br />' + 
+                            '<br />Device Platform: <br />' + device.platform + '<br />' + 
+                            //'<br />Device UUID: <br />'     + device.uuid     + '<br />' + 
+                            '<br />Device Model: <br />'    + device.model     + '<br />' + 
+                            '<br />Device Version: <br />'  + device.version  + '<br />';
+    }
+
+    </script>
+  </head>
+  <body>
+  		<h2 class="deviceHead"> Device Info </h2>
+  			<br/>
+  		<p id="deviceProperties">Loading device properties...</p>
+  </body>
+</html>

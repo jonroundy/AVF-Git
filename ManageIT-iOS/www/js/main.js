@@ -8,6 +8,14 @@ $("#native").click( function() {
 return false;
 });
 
+$("#deviceInfo").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('device.html').show();
+});
+return false;
+});
+
 $("#browser").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
@@ -16,7 +24,7 @@ $("#browser").click( function() {
 return false;
 });
 
-$("#data").click( function() {
+$("#accel").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
   $('.content').load('accelerometer.html').show();
@@ -60,7 +68,6 @@ success: function(data){
 console.log(data);
 for (i=0; i<8; i++){
 $(     
-			"<h2>Twitter Results</h2>"+
 			"<br/>"+
 			"<ul>"+ 
 			"<li>"+
@@ -91,7 +98,6 @@ success: function(request){
 console.log(request);
 for (i=0; i<3; i++){
 $(     
-			"<h2>FaceBook Results</h2>"+
 			"<br/>"+
 			"<ul>"+ 
 			"<li>"+

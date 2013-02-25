@@ -4,54 +4,111 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <link id="orientation" rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <!- Fonts ->
     <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Tienne:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="cordova-2.4.0.js"></script>
     <title>ManageIT</title>
 </head>
 
-        <section class="wrapper">
-            <div class="sideNav">
-            
-            	<header class="logo">
-        			<h1> Manage IT </h1>
-        		</header>
-        		
-            		<aside class="notice">
-            		
-	            	<p>Jon Roundy - AVF 2-13 <br/>This application is to showcase each weeks progress in our assignments</p>
-	            	
-		            </aside>
-		            
-		        <nav class="menu">
-			        <ul>
-				        <a href="#" id="native"><li> Native Features</li> </a>
-				        <a href="#" id="data"><li> Data API's</li> </a>
-				        <a href="#" id="research"><li> Research</li> </a>
-				    </ul>
-            
-				</nav>
-				
-            </div>
+<body>
+	
+	<header class="logo">
+	<a href="#"><img src="img/logo.png"> </a>
+	</header>
+	
+	<div class="pagewrap">
+	
+	<div class="pageInfo">
+	<article class="contentInfo">
+	<h2> Content Title </h2>
+	<p>This is where the current pages description will be.</p>
+	</article>
+	</div>
+	
+	<nav class="sidebar">
+		<ul>
+			<a href="#"> <li id="backbutton"> <img src="img/ico/icon-arrow-white-left.png" alt="icon-arrow-white-left" width="24" height="24"></li></a>
+			<a href="index.html" id="home"> <li> <img src="img/ico/home.png" alt="home" width="48" height="48"> </li> </a>
+			<a href="#" id="deviceInfo"> <li><img src="img/ico/infobox.png" alt="Device Info" width="48" height="48">  </li> </a>
+			<a href="#" id="accel"> <li> <img src="img/ico/accel_icon.png" alt="key" width="48" height="48"> </li></a>
+			<a href="#" id="contact"> <li> <img src="img/ico/vcards.png" alt="vcards" width="48" height="48">  </li> </a>
+			<a href="#" id="compass"> <li> <img src="img/ico/compass.png" alt="Compass" width="48" height="48">  </li> </a>
+			<a href="#" id="browser"> <li> <img src="img/ico/globe.png" alt="Facebook" width="48" height="48">  </li> </a>
+			<a href="#" id="twitter"> <li> <img src="img/ico/Twitter-32.png" alt="Twitter-32" width="32" height="32">  </li> </a>
+			<a href="#" id="facebook"> <li><img src="img/ico/facebook.png" alt="Facebook" width="48" height="48">  </li> </a>
+			<a href="#" id="googleMaps"> <li><img src="img/ico/google.png" alt="Google Maps" width="48" height="48">  </li> </a>
+		</ul>
+	</nav>
+	
+	<section>
+	<article  class="content">
+		<header>
+			<h2> Week 1 </h2>
+			<p> Posted on 02/10/2013 at 9:20:14 PM  </p>
+			<hr/>
+			<br/>
+		</header>
+<h2>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</h2>
+<br/>
+<p>Twitter can be a valuable asset for logins. I plan to use it along with Facebook login in my app. The benefit of using these methods not only give the user an easy way to register but also grants you quick and easy to access information about the user. With either auths you would be able to have access to time lines and tweets, which would give you the ability to use other means such as analytics to categorize information about your user base.There are already a few companies out there using twitter to send money. One that I can think of is Dwolla, in less then a few hundred characters you can transfer money to someone else with a few words and a hash tag. Soon we will end up seeing those horrible app and ring tone commercials having you tweet to get their offers instead of shooting a text..</p>
+<br/>
+<h2>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h2>
+<br/>
+<p>Most browsers prohibit pulling JSON or communicating with other domains. JSON-P uses a communication technique which allows up to pull the JSON from the domain.</p>
+<br/>
+<h2>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</h2>
+<br/>
+<p>Geo Location Google Maps will end up being one of the APIS i integrate with my app. With it I can pull info for customer addresses and log locations of completed Jobs. There are so many possibilities with all of the APIs available.</p>
+<br/>
+<h2>Please describe any design and functionality intentions you may have for your Demo app components this month.</h2>
+<br/>
+<p>I plan on integrating Geo Locations with my app along with user registration. There are still some UI elements that need to be added and a ton more content, still have plenty to get completed.</p>
+<br/>
+<h2>Briefly describe some past 'lessons learned' regarding work flow as it relates to research, design, development, etc.</h2>
+<br/>
+<p>One thing I have had to keep making sure I do is plan and research first. I always get so eager to start working on something that I jump into worrying about the design and the basic idea but don't think about all of the content or uses. Without having enough information or planning you put yourself into a bottleneck. Now that I am laying out the purpose I guess you could say and all     possible content it allows me to design a cleaner better flowing end product. Without knowing what you will be placing in the app your initial design may be useless, at least in my experience so far it has.</p>
+<br/>
+<br/>
+<br/>
+		<header>
+			<h2> Week 2 </h2>
+			<p>Posted on 02/17/2013 at 9:51:49 PM</p>
+			<hr/>
+			<br/>
+		</header>
+		
+<h2>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</h2>
 
-    	<article class="content">
-	    	<div id="twit"> </div>
-	    	<div id="fb"> </div>
-	    </article>
-    		
-        </section>
-    		<div class="clear"></div>
+<p>Using proper formatting in our code. WIth html5 we have been introduced a new way to format our pages in way that makes sense. We have been given a new way to call our divs so that not only it will make sense to us but for users that are using devices or software like screen readers. If by simply placing our articles within the article tag a user using jaws for instance will be able to find all the articles within a document instead of having 100 different divs that jaws just starts reading indefinitely until the user hears what they might be looking for.</p>
 
-        <script type="text/javascript" src="cordova-2.4.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+<h2>Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h2>
+
+<p>These applications require that the content the user is accessing is written in a manner the app is looking for. Using proper divs and tags within our code can ensure all users can access and enjoy what we are putting online.</p>
+
+<h2>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h2>
+
+<p>iOS has accessibility options built right into it. One feature is the flash led and vibrate on notification, some do this already of course but the customization can go even further. Now in iOS6 you can record vibration tones and set them to certain task on the phone. So for someone who can hear we might use a ringtone for a contact but now a deaf user can create a serious of custom vibrations for certain contacts of notifications like sms or email.</p>
+
+
+<h2>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h2>
+
+<p>There is an app called aidColors on iOS. The application allows the user to take a picture of a piece of clothing and it will state the color back to the user. Another iOS app is daisy worm it allows the user to load ebooks and have them read back to them.</p>
+	
+	</article>
+
+	
+	
+	</section> <!- content end -->
+	
+	</div> <!- pagewrap end -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAfSCWj9LSPh0HIdEVBozkub1l9yrwqUV4&sensor=true"></script>
+ 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
 
-    </body>
-
+</body>
 </html>

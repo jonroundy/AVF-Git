@@ -1,0 +1,257 @@
+body {	background-color: green;
+		
+	}
+
+.logo {
+	background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);
+	height: 45px;
+	text-align: center;
+	width:100% ;
+}
+	
+.pagewrap {
+	position: relative;
+	min-height:100%;
+	width: 100%;
+
+}
+
+.pageInfo {
+	position: absolute;
+	height: 20%;
+	z-index:100;
+	width:100%;
+	background-color: rgba(255,90,0,0.58);
+	padding-left: 20%;
+	
+	
+}
+
+.content {
+	background:white;
+	width: 100%;
+	z-index:1;
+	padding-top:60px;
+	position:relative;
+	top:0;
+	left:20%;
+}
+
+
+	
+.sidebar {
+    z-index:1;
+	width: 20%;
+	background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);
+	height: 100%;
+	float:left;
+	padding-top:60px;
+	position:relative;
+	top:0;
+}
+	
+	
+	
+	
+	
+	
+} /* Query end */
+
+
+
+
+
+/* iPad LANDSCAPE media query */
+@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+
+body {	background-color: blue;
+	
+}
+	
+
+} /* Query end */
+
+
+
+
+
+
+
+
+// Clear out page content and load clicked link
+
+$("#native").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('native.html').show();
+});
+return false;
+});
+
+$("#data").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('data.html').show();
+});
+return false;
+});
+
+$("#research").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('research.html').show();
+});
+return false;
+});
+
+$("#twitter").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('twitter.html').show();
+});
+return false;
+});
+
+$("#twit").load('twitter.html', function() {
+//get the JSON data from the Twitter search API
+$.getJSON("http://search.twitter.com/search.json?q=fullsail&amp;rpp=5&amp;callback=?", 
+function(data){
+console.log(data);
+	$("#twit").html("<h2>Twitter Results</h2>");
+		for (i=0, j=data.results.length; i<j; i++) {
+			$("#twit").append(
+			"<br/>"+
+			"<ul>"+ 
+			"<li>"+
+			'<img src='+data.results[i].profile_image_url+'>' +
+			'<br/>' +
+			'<p>' + data.results[i].text + '</p>'+
+			"<br/>" + 
+			'<p>' + data.results[i].from_user_name + ",</p>" + 
+			'<p>' + data.results[i].created_at  + '</p>' +
+			"</li>" +
+			"</ul>");
+		}
+	});
+
+});
+/*
+$(function() {
+$.getJSON("https://graph.facebook.com/search?q=tech&type=post", 
+function(request){
+console.log(request);
+	$("#fb").html("<h2>Facebook Results</h2>");
+		for (i=0; i<3; i++) {
+			$("#fb").append(
+			"<br/>"+
+			"<ul>"+ 
+			"<li>"+
+			"<p>" + request.data[i].from.name 	+"</p> <br/>" +
+			"<p>" +	request.data[i].message +",</p>" + 
+			"<p>" +	request.data[i].created_time +"</p>" +
+			"</li>" +
+			"<br/>" +
+			"</ul>");
+		}
+	});
+});
+*/
+
+/* iPad PORTRAIT media query */
+@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+body {	background-color: green;
+
+}
+
+.logo {
+	background:-webkit-linear-gradient(#2e2b2b 0%, #1e1c1c 100%);
+	position:absolute;
+	height: 10%;
+	text-align: center;
+	width:100% ;
+}
+
+.logo img{
+	margin-top:2%;
+}
+
+.pagewrap {
+ background:red;
+
+}
+
+.pageInfo {
+ position:absolute;
+ background:#F85717;
+ left: 15%;
+ top: 10%;
+ z-index: 100;
+ height:8.35%;
+ width:90%;
+ 
+}
+
+.contentInfo{
+	padding: 16px 0px 0px 33px;
+	color: white;
+}
+
+.contentInfo h2{
+font-family:Tienne;
+}
+
+.content {
+position:absolute;
+background:white;
+right:0;
+left:15%;
+top:18.345%;
+z-index: 1;
+height:82.7%;
+
+}
+
+.sidebar {
+top:10%;
+background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);
+color:white;
+position:absolute;
+width:15%;
+float:left;
+height:91%;
+
+}
+
+.sidebar li {
+	margin-left: 1%;
+	margin-right: 1%;
+	background:-webkit-linear-gradient(#121111 0%, #212020 100%);
+	line-height:90px;
+	text-align: center;
+	margin:5px;
+
+}
+
+.sidebar ul {
+
+}
+.sidebar li img {
+	vertical-align: middle;
+}
+
+#backbutton {
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	background:#F85717;
+	opacity: .6;
+	height:10%;
+	
+
+
+}
+
+
+
+
+} /* Query end */
