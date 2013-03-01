@@ -1,9 +1,16 @@
 // Clear out page content and load clicked link
-
 $("#native").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
   $('.content').load('home.html').show();
+});
+return false;
+});
+
+$("#camera").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('camera.html').show();
 });
 return false;
 });
@@ -85,15 +92,13 @@ $('.content').fadeIn(1000);
 	return false;
 });
 
-
-
 $("#facebook").on('click', function(){
 $('.content').fadeOut(500);
 $('.content').empty();
 $.ajax({
-url: "https://graph.facebook.com/search?q=tech&type=post",
+url: "https://graph.facebook.com/search?q=coffee&type=place&center=37.76,-122.427&distance=1000&access_token=AAAAAAITEghMBAOaFKMmoY4zE4JX9LcPI5O2aBZANoWSDRUhcnvMU0QikM8rqKn4I7IKqvQ9XLDqB6YdoZAW3FjCRAvbXSBUkmmo4Of0gZAFfYFK5yfx",
 type: 'GET',
-dataType: 'json',
+dataType: 'jsonp',
 success: function(request){
 console.log(request);
 for (i=0; i<3; i++){
@@ -101,9 +106,13 @@ $(
 			"<br/>"+
 			"<ul>"+ 
 			"<li>"+
-			"<p>" + request.data[i].from.name+"</p> <br/>" +
-			"<p>" +	request.data[i].message +",</p>" + 
-			"<p>" +	request.data[i].created_time +"</p>" +
+			"<p>" + 'Name: ' + request.data[i].name+"</p> <br/>" +
+			"<p>" + 'Street: ' +	request.data[i].location.street +",</p>" + 
+			"<p>" + 'City: ' +	request.data[i].location.city +"</p>" +
+			"<p>" + 'State: ' +	request.data[i].location.state +"</p>" +
+			"<p>" + 'Zip: ' +	request.data[i].location.zip +"</p>" +
+			"<p>" + 'Latitude: ' +	request.data[i].location.latitude +"</p>" +
+			"<p>" + 'Longitude: ' +	request.data[i].location.longitude +"</p>" +
 			"</li>" +
 			"<br/>" +
 			"</ul>"
