@@ -1,5 +1,5 @@
 /* iPad PORTRAIT media query */
-@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+@media all and (orientation:portrait){
 
 html body {	
 	background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);
@@ -157,7 +157,7 @@ html body {
 
 /* iPad LANDSCAPE media query */
 
-@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+@media all and (orientation:landscape) {
 
 html body {	
 	background:-webkit-linear-gradient(#2e2b2b 0%, #383838 100%);

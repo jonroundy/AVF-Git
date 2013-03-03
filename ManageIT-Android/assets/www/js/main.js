@@ -1,9 +1,17 @@
-// Clear out page content and load clicked link
 
+// Clear out page content and load clicked link
 $("#native").click( function() {
   //alert("Handler for .click() called.");
   $('.content').fadeOut(500, function() {
   $('.content').load('home.html').show();
+});
+return false;
+});
+
+$("#camera").click( function() {
+  //alert("Handler for .click() called.");
+  $('.content').fadeOut(500, function() {
+  $('.content').load('camera.html').show();
 });
 return false;
 });
@@ -72,37 +80,42 @@ $(
 			"<ul>"+ 
 			"<li>"+
 			'<br/>' +'<img src='+data.results[i].profile_image_url+'>' +
-			"<br/>" + '<p>' + data.results[i].text + '</p>'+
+			"<br/>" + 
+			'<p>' + data.results[i].text + '</p>'+
 			'<p>' + data.results[i].from_user_name + ",</p>" + 
 			'<p>' + data.results[i].created_at  + '</p>' +
+			'<a class="twitLink" id="twitLink'+data.results[i].from_user+'" href="#">' +data.results[i].from_user+ '</a>'+
 			"</li>" +
 			"</ul>"
 ).appendTo('.content');
 $('.content').fadeIn(1000);
 			}
-		}
-	});
+
+$(".twitLink").click( function() {
+		var fromUser = $(this).html();
+		var ref = window.open("http://www.twitter.com/"+fromUser, '_blank', 'location=yes');
+		});
+	}
+});
 	return false;
 });
 
-
-
 $("#facebook").on('click', function(){
-$('.content').fadeOut(500);
-$('.content').empty();
+	$('.content').fadeOut(500);
+	$('.content').empty();
 $.ajax({
-url: "https://graph.facebook.com/search?q=tech&type=post",
-type: 'GET',
-dataType: 'json',
-success: function(request){
-console.log(request);
+	url: "https://graph.facebook.com/search?q=tech&type=post",
+	type: 'GET',
+	dataType: 'json',
+	success: function(request){
+		console.log(request);
 for (i=0; i<3; i++){
 $(     
 			"<br/>"+
-			"<ul>"+ 
-			"<li>"+
-			"<p>" + request.data[i].from.name+"</p> <br/>" +
-			"<p>" +	request.data[i].message +",</p>" + 
+			"<ul>"+
+			"<li>"+				
+			"<p>" + request.data[i].from.name +"</p> <br/>" +
+			"<p>" +	request.data[i].message +",</p>" +
 			"<p>" +	request.data[i].created_time +"</p>" +
 			"</li>" +
 			"<br/>" +
@@ -114,8 +127,6 @@ $('.content').fadeIn(1000);
 	});
 	return false;
 });
-
-/* PHONEGAP */
 
 
 
