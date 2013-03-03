@@ -1,3 +1,4 @@
+
 // Clear out page content and load clicked link
 $("#native").click( function() {
   //alert("Handler for .click() called.");
@@ -79,40 +80,43 @@ $(
 			"<ul>"+ 
 			"<li>"+
 			'<br/>' +'<img src='+data.results[i].profile_image_url+'>' +
-			"<br/>" + '<p>' + data.results[i].text + '</p>'+
+			"<br/>" + 
+			'<p>' + data.results[i].text + '</p>'+
 			'<p>' + data.results[i].from_user_name + ",</p>" + 
 			'<p>' + data.results[i].created_at  + '</p>' +
+			'<a class="twitLink" id="twitLink'+data.results[i].from_user+'" href="#">' +data.results[i].from_user+ '</a>'+
 			"</li>" +
 			"</ul>"
 ).appendTo('.content');
 $('.content').fadeIn(1000);
 			}
-		}
-	});
+
+$(".twitLink").click( function() {
+		var fromUser = $(this).html();
+		var ref = window.open("http://www.twitter.com/"+fromUser, '_blank', 'location=yes');
+		});
+	}
+});
 	return false;
 });
 
 $("#facebook").on('click', function(){
-$('.content').fadeOut(500);
-$('.content').empty();
+	$('.content').fadeOut(500);
+	$('.content').empty();
 $.ajax({
-url: "https://graph.facebook.com/search?q=coffee&type=place&center=37.76,-122.427&distance=1000&access_token=AAAAAAITEghMBAOaFKMmoY4zE4JX9LcPI5O2aBZANoWSDRUhcnvMU0QikM8rqKn4I7IKqvQ9XLDqB6YdoZAW3FjCRAvbXSBUkmmo4Of0gZAFfYFK5yfx",
-type: 'GET',
-dataType: 'jsonp',
-success: function(request){
-console.log(request);
+	url: "https://graph.facebook.com/search?q=tech&type=post",
+	type: 'GET',
+	dataType: 'json',
+	success: function(request){
+		console.log(request);
 for (i=0; i<3; i++){
 $(     
 			"<br/>"+
-			"<ul>"+ 
-			"<li>"+
-			"<p>" + 'Name: ' + request.data[i].name+"</p> <br/>" +
-			"<p>" + 'Street: ' +	request.data[i].location.street +",</p>" + 
-			"<p>" + 'City: ' +	request.data[i].location.city +"</p>" +
-			"<p>" + 'State: ' +	request.data[i].location.state +"</p>" +
-			"<p>" + 'Zip: ' +	request.data[i].location.zip +"</p>" +
-			"<p>" + 'Latitude: ' +	request.data[i].location.latitude +"</p>" +
-			"<p>" + 'Longitude: ' +	request.data[i].location.longitude +"</p>" +
+			"<ul>"+
+			"<li>"+				
+			"<p>" + request.data[i].from.name +"</p> <br/>" +
+			"<p>" +	request.data[i].message +",</p>" +
+			"<p>" +	request.data[i].created_time +"</p>" +
 			"</li>" +
 			"<br/>" +
 			"</ul>"
@@ -123,8 +127,6 @@ $('.content').fadeIn(1000);
 	});
 	return false;
 });
-
-/* PHONEGAP */
 
 
 
