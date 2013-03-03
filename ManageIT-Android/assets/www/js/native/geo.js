@@ -31,7 +31,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     function createMarker(map){
 //console.log('createMarker');
 $.ajax({
-url: "https://graph.facebook.com/search?q=restaurant&type=place&center=34.014264,-86.006639&distance=1000&access_token=AAAAAAITEghMBAAaScEcHBG5qOy6KFLClKhYBbDh5ekZC6atBUZBYPIQEMu3cd2DKnf8ayVVgSZCZAvajB7iclXAhQgMVQy6aqBuXOMECApCYelguAPrp",
+url: "https://graph.facebook.com/search?q=restaurant&type=place&center=34.014264,-86.006639&distance=1000&access_token=AAAAAAITEghMBAOH8BWtP8DGVIXgWnsVEv11SZBgvgOuHAKFWBd84LwUcXZCoBaG48SZBEZAFGzYsKucEdjR5ON4sKxGsdJm55J548hZAfHZBMCyfivSObz",
 type: 'GET',
 dataType: 'json',
 success: function(request) {
